@@ -9,7 +9,7 @@ import java.io.File;
 
 import io.restassured.RestAssured;
 
-public class BookingAuthTest {
+public class BookingAuthTest03 {
 	
 	
 	@Test

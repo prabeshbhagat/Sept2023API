@@ -15,7 +15,7 @@ import java.util.List;
 public class GETAPIRequestTestWithBDD01_02 {
 	
 	@Test
-	public void getProductTest() {
+	public void getProductTest_BDD_Style_01() {
 		
 		given().log().all()
 			.when().log().all()
@@ -38,7 +38,7 @@ public class GETAPIRequestTestWithBDD01_02 {
 	}
 	
 	@Test
-	public void getUserAPITest02() {
+	public void getUserAPITest_BDD_Style_withHeader_02() {
 		RestAssured.baseURI = "https://gorest.co.in";
 		
 		given().log().all()
@@ -57,7 +57,7 @@ public class GETAPIRequestTestWithBDD01_02 {
 	}
 	
 	@Test
-	public void getProductDataApiWithQueryParamTest02() {
+	public void getProductDataApiWithQueryParamTest_BDD_Style_With_Limit_3() {
 		RestAssured.baseURI = "https://fakestoreapi.com";
 		
 		given().log().all()
@@ -73,7 +73,7 @@ public class GETAPIRequestTestWithBDD01_02 {
 	}
 	
 	@Test
-	public void getProductDataApiWithQueryParamTest021() {
+	public void getProductDataApiWithQueryParamTest__BDD_Style_With_JSON_ARRAY_Limit_4() {
 		RestAssured.baseURI = "https://fakestoreapi.com";
 		
 		given().log().all()

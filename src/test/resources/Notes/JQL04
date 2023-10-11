@@ -1,0 +1,28 @@
+Jayway Restassured--JSON Path Query Langauage.
+
+JQL
+
+1.$[*].id--fetch all the ids
+2.$[*].title--fetch all the titles
+3.$[*].rating.rate--gfetch all the rates
+4.$[*]..rate
+4.5)$[*]..count,rate-fetch all ratee & Count
+5)$[?(@.rating.rate<=3)].rating.rate--rate <3
+6)$[*].title--fetch all title
+7)$[?(@.id==3)].price--product price where id=3
+
+8)fetch the title & price where category is jewelery
+$[?(@.category=="jewelery")].[title,price]
+
+9)fetch the title of the products with raing rate >=4.5
+$[?(@.rating.rate>=4.5)].[title]
+
+10)$[?(@.price<=30)].[title]
+fetch the title of the products where price is less tahn 30$
+
+11)fetch the title of the products where category=jewelery and rate in between 2 and 4
+$[?(@.category=='jewelery'  && @.rating.rate>=2 && @.rating.rate<=4)].[title,category]
+
+12)fetch the title & category of the products where category=jewelery and rate>100 & price < 10
+$[?(@.category=='women\'s clothing' && @.rating.count>=100  && @.price<10)].[title,category]
+

@@ -60,12 +60,14 @@ public class RequestResponseSpecBuilderAssignment03 {
 	
 	@Test
 	public void get_User_Resp_200_spec_test() {
-		RestAssured.given().log().all()
-					.spec(user_req_spec())
+		
+		
+		given().log().all()
+			.spec(user_req_spec())
 					.get("/public/v2/users")
-					.then()
-					.assertThat()
-					.spec(get_Resp_Spec_200Ok());
+						.then()
+							.assertThat()
+								.spec(get_Resp_Spec_200Ok());
 				
 	}
 	
