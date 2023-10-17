@@ -18,11 +18,26 @@ $[?(@.category=="jewelery")].[title,price]
 $[?(@.rating.rate>=4.5)].[title]
 
 10)$[?(@.price<=30)].[title]
-fetch the title of the products where price is less tahn 30$
+fetch the title of the products where price is less than 30$
 
 11)fetch the title of the products where category=jewelery and rate in between 2 and 4
-$[?(@.category=='jewelery'  && @.rating.rate>=2 && @.rating.rate<=4)].[title,category]
+$[?(@.category=='jewelery'  && @.rating.rate>=2 && @.rating.rate<=4)].[title,category]-->>List<Map<String,String>>
 
 12)fetch the title & category of the products where category=jewelery and rate>100 & price < 10
 $[?(@.category=='women\'s clothing' && @.rating.count>=100  && @.price<10)].[title,category]
+
+
+
+{
+        "id": 1,
+        "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        "price": 109.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "rating": {
+            "rate": 3.9,
+            "count": 120
+        }
+    },
 

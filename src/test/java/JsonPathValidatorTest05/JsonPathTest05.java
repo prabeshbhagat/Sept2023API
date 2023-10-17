@@ -43,12 +43,13 @@ public class JsonPathTest05 {
 				.get("/products");
 		
 		String jsonResponse=response.asString();
+		JsonPath.read(jsonResponse, "$[?(@.rating.rate<=3)].rating.rate");
 		
 		List<Float> rateLessThanThree=JsonPath.read(jsonResponse, "$[?(@.rating.rate<=3)].rating.rate");
 		System.out.println(rateLessThanThree);
 		System.out.println(rateLessThanThree.size());
 		
-		
+		//With two Key attributes.
 		List<Map<String,Object>> jeweleryList=
 				JsonPath.read(jsonResponse, "$.[?(@.category=='jewelery')][\"title\",\"price\"]");
 		System.out.println(jeweleryList);
@@ -60,6 +61,24 @@ public class JsonPathTest05 {
 			System.out.println(price);
 			System.out.println("---------------");
 		}
+		
+		
+		//With three Key attributes.
+				List<Map<String,Object>> jeweleryListWithID=
+						JsonPath.read(jsonResponse, "$.[?(@.category=='jewelery')][\"price\",\"id\",\"title\"]");
+				System.out.println(jeweleryListWithID);
+				
+				for(Map<String,Object> product:jeweleryListWithID) {
+					Object price=product.get("price");
+					Object id=product.get("id");
+					Object title=product.get("title");
+					System.out.println("############");
+					System.out.println(price);
+					System.out.println(id);
+					System.out.println(title);
+					System.out.println("############");
+				}
+			
 	
 	}
 }

@@ -9,7 +9,7 @@ public class Credentials04 {
 	
 	
 	public Credentials04(String username, String password) {
-		super();
+		//super();
 		this.username = username;
 		this.password = password;
 	}
