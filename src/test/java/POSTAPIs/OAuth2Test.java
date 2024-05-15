@@ -77,12 +77,7 @@ public class OAuth2Test {
 		  System.out.println("type"+type);
 		  String origin=js.get("data[0].origin");
 		  System.out.println("origin"+origin);
-				
-		
-		
-			
-		
-		
+	
 	}
 	
 

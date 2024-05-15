@@ -69,7 +69,7 @@ public class CreateUserWithLombok06 {
 		
 		
 		RestAssured.baseURI="https://gorest.co.in";
-		User06 user = new User06.UserBuilder()
+		User06 user = new User06.User06Builder()
 				.name("Naveen")
 				.email(getRandomEmailId())
 				.status("active")

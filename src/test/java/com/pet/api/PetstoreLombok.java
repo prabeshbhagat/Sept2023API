@@ -9,8 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -24,21 +23,9 @@ public class PetstoreLombok {
 	private String status;
 	private List<Tag> tags;
 
-	public PetstoreLombok() {
+	
 
-		// TODO Auto-generated constructor stub
-	}
-
-	public PetstoreLombok(Integer id, Category category, String name, List<String> photoUrls, String status,
-			List<Tag> tags) {
-
-		this.id = id;
-		this.category = category;
-		this.name = name;
-		this.photoUrls = photoUrls;
-		this.status = status;
-		this.tags = tags;
-	}
+	
 
 	public Integer getId() {
 		return id;
@@ -97,15 +84,7 @@ public class PetstoreLombok {
 		private Integer id;
 		private String name;
 
-		public Category(Integer id, String name) {
-
-			this.id = id;
-			this.name = name;
-		}
-
-		public Category() {
-
-		}
+		
 
 		public Integer getId() {
 			return id;
@@ -134,16 +113,7 @@ public class PetstoreLombok {
 		private Integer id;
 		private String name;
 
-		public Tag() {
-
-			// TODO Auto-generated constructor stub
-		}
-
-		public Tag(Integer id, String name) {
-
-			this.id = id;
-			this.name = name;
-		}
+		
 
 		public Integer getId() {
 			return id;

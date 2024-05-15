@@ -98,14 +98,14 @@ public class GETAPIRequestTestWithoutBDD01 {
 	public void getUsersAPIQueryParameterWithHashMapAPITest() {
 
 		// Request Creation Part
-//		RestAssured.baseURI = "https://gorest.co.in";
-//		RequestSpecification request = RestAssured.given();
+		RestAssured.baseURI = "https://gorest.co.in";
+		RequestSpecification request = RestAssured.given();
 		Map<String,String> queryParamsMap=new HashMap<String,String>();
 		queryParamsMap.put("name", "Desai");
 		queryParamsMap.put("gender", "male");
 		request.queryParams(queryParamsMap);
 //		
-//		request.header("Authorization", "Bearer d4176ed674fe764cb7b27dbf32d481b4fb0c8b4b0721a2aa12583d0d60c3d26b");
+		request.header("Authorization", "Bearer d4176ed674fe764cb7b27dbf32d481b4fb0c8b4b0721a2aa12583d0d60c3d26b");
 		Response response = request.get("/public/v2/users");
 
 		// ====================

@@ -26,7 +26,7 @@ public class RequestSpecBuilderTest03 {
 		
 	}
 	
-	//building a utility of the above method
+	//building a utility of the above lines of code
 	
 	public static RequestSpecification user_req_spec() {
 		
@@ -52,25 +52,13 @@ public class RequestSpecBuilderTest03 {
 	public void getUser_with_Request_Spec_with_Pathparam() {
 
 		RestAssured.given().log().all()
-		.queryParam("name", "naveen")
+		.queryParam("name", "Ahalya")
 		.queryParam("status", "active")
 			.spec(user_req_spec())
 				.get("/public/v2/users")
 					.then().log().all()
 						.statusCode(200);	
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 
 }
